@@ -17,5 +17,5 @@
       "watch": "npm run watch:site",
       "serve": "env DEV=true eleventy --quiet --incremental"
     }
-  }
+}
   
