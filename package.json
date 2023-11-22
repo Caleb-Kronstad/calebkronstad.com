@@ -2,24 +2,20 @@
     "name": "calebkronstad.com",
     "version": "0.0.1",
     "description": "Caleb Kronstad",
-    "main": "calebkronstad.html",
-    "scripts": {
-      "build": "npx @11ty/eleventy"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+"
-    },
-    "keywords": [
-      "caleb",
-      "kronstad",
-      "11ty"
-    ],
+    "main": "index.html",
+    "repository": "https://github.com/Caleb-Kronstad/calebkronstad.com",
     "author": "Caleb Kronstad",
     "license": "Unlicense",
     "homepage": "https:",
     "devDependencies": {
-      "@11ty/eleventy": "^0.12.1"
+      "@11ty/eleventy": "^2.0.1"
+    },
+    "scripts": {
+      "build:site": "eleventy --quiet",
+      "build": "npc run build:site",
+      "watch:site": "eleventy --serve",
+      "watch": "npm run watch:site",
+      "serve": "env DEV=true eleventy --quiet --incremental"
     }
   }
   
