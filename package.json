@@ -6,7 +6,6 @@
     "repository": "https://github.com/Caleb-Kronstad/calebkronstad.com",
     "author": "Caleb Kronstad",
     "license": "Unlicense",
-    "homepage": "https:",
     "devDependencies": {
       "@11ty/eleventy": "^2.0.1"
     },
