@@ -5,7 +5,7 @@
 
 <style>
     html{
-        background-image: url();
+        background-color: rgb(251, 247, 235);
     }
 
     body {
@@ -18,6 +18,7 @@
     .container {
         margin-left: 20%;
         margin-top: 2%;
+        margin-bottom: -2%;
     }
 
     .navigation{
@@ -26,7 +27,7 @@
         top: 0;
         position: fixed;
         padding: 1%;
-        background-color: blanchedalmond;
+        background-color: rgb(253, 228, 190);
     }
 
     nav {
@@ -77,18 +78,27 @@
         grid-area: f;
     }
 
+    #cont7 {
+        grid-area: g;
+    }
+    
+    #cont8 {
+        grid-area: h;
+    }
+
     .text-area {
         display: grid;
 
         grid-template-areas: 
-                    "a c c"
-                    "b b d"
-                    "e e e"
-                    "f f f";
+                    "a c c c"
+                    "b b d d"
+                    "e e e e"
+                    "f f g g"
+                    "h h g g ";
 
         align-items: start;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 30% 1fr 1fr
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.6fr 1fr 0.5fr;
     }
 
     .content {
@@ -126,7 +136,7 @@
             <!-- <h3 style="text-align: center;">Navigation</h3> -->
             <nav>
                 <div>
-                    <a href="../index.html">calebkronstad.com</a>
+                    ⬅️<a href="../index.html">calebkronstad.com</a>
                 </div>
                 
                 <div class="navright">
@@ -162,41 +172,63 @@
                         </div> -->
 
                         <div id="cont1" class="content"> 
-                            <img src="https://piskel-imgstore-b.appspot.com/img/15e6ae80-90c7-11ee-8790-6d71b1fa64b8.gif" alt="weeeeeeeeeeeeeee" style="width: 100%; height: 100%;">
+                            <img src="apartment.jpg" style="width: 100%; height: 100%; margin-top: 5%; margin-left: 2.5%;">
                         </div>
 
                         <div id="cont2" class="content"> 
-                            <img src="layout.jpg" style="width: 100%; height: 100%;">
+                            <img src="layout.jpg" style="width: 100%; height: 100%; margin-top: 5%;">
+                        </div>
+
+                        <div id="cont6" class="content"> 
+                            <img src="ikea.png" style="width: 100%; height: 100%; margin-top: 5%;">
+                        </div>
+
+                        <div id="cont7" class="content"> 
+                            <img src="table.jpg" style="width: 100%; height: 100%; margin-top: 5%;">
+
+                            <a href="goofy.html" id="filler" class="content"> 
+                                <img src="https://piskel-imgstore-b.appspot.com/img/15e6ae80-90c7-11ee-8790-6d71b1fa64b8.gif" alt="space filler" style="width: 10%; height: 15%; margin-top: -57%; margin-left: 35%;">
+                            </a>
                         </div>
                         
-                        <div id="cont3" class="content">
+                        <div id="cont8" class="content" style="height: 75%; width: 75%;"> 
+                            <img src="couch.png" style="width: 100%; height: 100%; margin-top: 5%;">
+                        </div>
+                        
+                        <div id="cont3" class="content" style="border-bottom: 2px solid rgb(203, 180, 142);">
                             <p>
-                                Since the job I chose is in Charlotte, I took to the internet to find housing options. I ended up finding a decent option on 
-                                <a href="https://www.apartments.com/two20-at-branchview-charlotte-nc/j37ztm7/" target="_blank">apartments.com</a>.
-                                The monthly rent is $1,100, which is the cheapest I could find in Charlotte that also had a decent commute to my job. It includes internet
-                                access which they advertise as "high speed", but knowing how these companies work there is a very good chance it's actually subpar. 
+                                Since the job I chose is in Cary, I took to the internet to find housing options. I ended up finding a 
+                                <a href="https://www.windsortryonvillage.com/floor-plans.aspx?beds=1&baths=1" target="_blank">decent option</a> 
+                                online (2000 Crossroads Manor Ct, Cary, NC 27518) that only has a 3 minute commute to Epic, which will save me a ton of gas money.
+                                
+                                The apartment's monthly rent is $1,198, and my housing budget 
+                                is around $1,863 (maximum 33% of my monthly income), so this apartment fits nicely, especially since I prefer to have 
+                                the price below 25% of my budget.
                             </p>
                         </div>
 
                         <div id="cont4" class="content">
                             <p>
-                                Features of the apartment include:
-                            </p>
-
-                            <ul>
-                                <li>1 bed</li>
-                                <li>1 bath</li>
-                                <li>Living area</li>
-                                <li>Kitchen</li>
-                                <li></li>
-                            </ul>
+                                The 765 square foot apartment includes 1 bedroom and 1 bathroom. We can assume the security deposit is the first month's rent.
+                                According to <a href="https://www.numbeo.com/cost-of-living/in/Cary-NC" target="_blank">numbeo.com</a>, 
+                                the average Cary resident's monthly bill for utilities in total is roughly $185. Since Verizon
+                                covers the Cary area better than any other data provider, I will be going with their unlimited ultimate phone plan which costs $65/month.
+                            </p> 
                         </div>
 
                         <div id="cont5" class="content">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus. 
-                                Pellentesque habitant morbi tristique senectus et netus et. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
-                                Sit amet justo donec enim diam vulputate ut pharetra sit. Neque vitae tempus quam pellentesque nec. Pharetra diam sit amet nisl. 
+                                For furniture, I expect I will need a bed, desk, couch, coffee table, dining table, and chairs. I can take the desk and chair from my 
+                                current bedroom, and we can borrow a friend's truck to transport my mattress. I would then get a 
+                                <a href="https://www.costco.com/kaelyn-5-piece-dining-table-set.product.4000059728.html" target="_blank">dining table</a> 
+                                at Costco for around $999.
+                                Everything else I will get from Ikea, so I would get a decent 
+                                <a href="https://www.ikea.com/us/en/p/friheten-sleeper-sectional-3-seat-w-storage-skiftebo-dark-gray-s69216757/" target="_blank">$80 coffee table</a>, 
+                                and a
+                                <a href="https://www.ikea.com/us/en/p/friheten-sleeper-sectional-3-seat-w-storage-skiftebo-dark-gray-s69216757/" target="_blank">$900 couch</a> 
+                                (why are they so expensive?!).
+                                <br>
+                                Overall, this furniture will cost me about $1,979 dollars, which will take our $10,000 savings down to $8,021.
                             </p>
                         </div>
                     </div>

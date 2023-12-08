@@ -5,7 +5,7 @@
 
 <style>
     html{
-        background-image: url();
+        background-color: rgb(251, 247, 235);
     }
 
     body {
@@ -18,6 +18,7 @@
     .container {
         margin-left: 20%;
         margin-top: 2%;
+        margin-bottom: -2%;
     }
 
     .navigation{
@@ -26,7 +27,7 @@
         top: 0;
         position: fixed;
         padding: 1%;
-        background-color: blanchedalmond;
+        background-color: rgb(253, 228, 190);
     }
 
     nav {
@@ -81,13 +82,15 @@
         display: grid;
 
         grid-template-areas: 
-                    "a b b"
+                    "a a b"
                     "c c c"
-                    "c c c";
+                    "e d d"
+                    "e d d"
+                    "f f f";
 
         align-items: start;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 0.8fr 0.3fr;
     }
 
     .content {
@@ -110,10 +113,15 @@
         font-size: 1.2em;
     }
 
-    .info > * {
-        text-align: left;
-        margin-left: 1%;
-        font-size: 90%;
+    table{
+        display: table;
+        border: 2px solid rgb(203, 180, 142);
+    }
+
+    th, td{
+        display: table-cell;
+        border: 2px dashed rgb(203, 180, 142);
+        padding: 2.5%;
     }
 
 </style>
@@ -125,7 +133,7 @@
             <!-- <h3 style="text-align: center;">Navigation</h3> -->
             <nav>
                 <div>
-                    <a href="../index.html">calebkronstad.com</a>
+                    ⬅️<a href="../index.html">calebkronstad.com</a>
                 </div>
                 
                 <div class="navright">
@@ -155,41 +163,100 @@
                 <!-- Main Section -->
                 <div class="box">
                     <div class="text-area">
-                        
-                        <!-- Image box -->
-                        <!-- <div class="bounding-box" style="background-image: url("filename.png")"> 
-                        </div> -->
 
-                        <div id="cont1" class="content" style="margin-top: 7%; margin-left: 7.5%;"> 
-                            <img src="https://piskel-imgstore-b.appspot.com/img/15e6ae80-90c7-11ee-8790-6d71b1fa64b8.gif" style="width: 95%; height: 100%;">
+                        <div id="cont2" class="content" style="margin-top: 7.5%; margin-left: 5%;"> 
+                            <img src="softwareengineer.jpg" style="width: 95%; height: 100%;">
                         </div>
 
-                        
-                        <div id="cont2" class="content">
+                        <div id="cont5" class="content"> 
+                            <img src="epicgames.png" style="width: 100%; height: 100%; margin-top: 10%;">
+                        </div>
+
+                        <div id="cont1" class="content">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus. 
-                                Pellentesque habitant morbi tristique senectus et netus et. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
-                                Sit amet justo donec enim diam vulputate ut pharetra sit. Neque vitae tempus quam pellentesque nec. Pharetra diam sit amet nisl. 
+                                After graduating from NC State, I will be in need of a job. Per my expected degree and experience, I decided to choose an entry level 
+                                <a href="https://boards.greenhouse.io/epicgames/jobs/4859046004?t=28c0fa9e4us" target="_blank">game server engineer position</a> 
+                                at Epic Games, located in Cary, NC. The position requirements are as follows:
                             </p>
+
+                            <ul>
+                                <li>Experience shipping networked multiplayer games</li>
+                                <li>Excellent C++ skills, with a familiarity of scripting systems like Blueprint, Lua, Python, etc.</li>
+                                <li>Experience in a cross-disciplinary development environment, with excellent communication skills</li>
+                                <li>Strong grasp of game networking concepts</li>
+                                <li>Experience developing in a large codebase at a fast pace, making trade-offs between usability, performance, and memory</li>
+                                <li>Self-motivated, strong work ethic, and able to work independently</li>
+                                <li>Keen interest in games</li>
+                            </ul>
                         </div>
 
                         <div id="cont3" class="content">
                             <p>
-                                Per my expected degree and experience, I decided to choose a 
-                                <a href="https://www.3plsoftware.com/jobs/junior-developer" target="_blank">junior developer job</a> 
-                                at Camelot 3PL Software. The position requirements are as follows:
+                                I expect to have all of these things and more after graduating from college with a BS in computer science, so I believe this job would be obtainable for me. 
+                                According to <a href="https://www.levels.fyi/companies/epic-games/salaries/software-engineer/levels/l1" target="_blank">levels.fyi</a>, the salary of someone in a 
+                                position similar to this at Epic tends to be around $91,613, and <a href="https://www.salary.com/tools/salary-calculator/game-engineer" target="_blank">salary.com</a> seems to 
+                                generally agree. This is a very good salary to have just out of college, and the job also includes benefits to help me pay for other needed things (financials 
+                                are covered more extensively on the <a href="budgeting.html">budgeting page</a>)
+                                <br>
+
+                                <div style="width: max-content;">
+                                    <table style="table-layout:inherit;">
+                                        <tr>
+                                            <th>Taxes</th>
+                                            <th>Pay Deduction</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Before Taxes</td>
+                                            <td>$0 (0%)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Federal Income Tax</td>
+                                            <td>$12,923 (14.11%)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>State Income Tax</td>
+                                            <td>$3,935 (4.30%)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payroll (FICA) Tax</td>
+                                            <td>$7,008 (7.65%)</td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <p><b>Total after tax: $67,747</b></p>
+                                </div>
+
+                                If we divide $67,747 by 12 months we will get my monthly pay, which ends up being $5,645 per month. 
+                                This is incredibly good for my first job, especially with all the benefits offered.
+                            </p>
+                        </div>
+
+                        <div id="cont4" class="content">
+                            <p>
+                                The position's many benefits include:
                             </p>
 
                             <ul>
-                                <li>BS degree in computer science</li>
-                                <li>Academic experience programming in C#, Java, or another comparable modern object-oriented language</li>
-                                <li>Knowledge of database structures</li>
-                                <li>Comfortable developing software on Microsoft Windows OS and using MS dev tools</li>
-                                <li>Attention to details</li>
-                                <li>Ability to debug and troubleshoot</li>
+                                <li>100% coverage of insurance premiums</li>
+                                <li>Coverage includes medical, dental, vision, long term disability, and life insurance</li>
+                                <li>401k with competitive match and profit share</li>
+                                <li>Robust mental well-being program offered through Modern Health, which provides free therapy and coaching</li>
+                                <li>Events and company-wide paid breaks</li>
+                                <li>Unlimited PTO and sick time</li>
                             </ul>
+                        </div>
 
-                            <p>I expect to have all of these things and more after graduating from college, so I believe this job would be obtainable for me.</p>
+                        <div id="cont6" class="content">
+                            <p>
+                                Reading through the list of benefits my jaw was wide open like "wow, they actually care about their employees". As the developer
+                                of Fortnite, Epic Games can sometimes get a bad rap for some poor choices they've made with the game and its systems, but as a
+                                developer myself I see them more as the creators of Unreal Engine (a game development engine), which has dominated the game engine
+                                market recently (especially with Unity alienating their userbase with unexpected price changes and added fees). 
+
+                                <br><br>
+                                At Epic, I would likely be working a lot every week according to reviews from people who are employed or have been employed there, but 
+                                with all the other benefits of the position I believe it would be worth it, especially for my first job after college.
+                            </p>
                         </div>
                     </div>
                 </div>
