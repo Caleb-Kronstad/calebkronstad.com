@@ -1,16 +1,32 @@
 <style>
-    html, body {
+
+    html {
+        font-size: 14px;
         overflow-x: hidden;
     }
     
     body {
         overflow-y: hidden;
-        margin: 1.5vw;
-        font: 1vw Helvetica, Arial, sans-serif;
+        overflow-x: hidden;
+        margin: 3rem;
+        font: 1rem Helvetica, Arial, sans-serif;
     }
 
+    h1 {
+        font-size: 2.5rem;
+    }
+    
     nav {
-        line-height: 1.5vw;
+        line-height: 2rem;
+        font-size: 1.25rem;
+    }
+
+    #download {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.25rem;
     }
 
 </style>
@@ -19,42 +35,47 @@
 
 <html>
     <body>
-        <h1>Nifty Engine</h1>
         <nav>
             <a href="../index.html">Website Home</a><br>
         </nav>
 
-        <!-- INTRODUCTION TO ENGINE -->
-        <p>
-            Nifty Engine is a 3D game engine that I am currently developing in C++ using OpenGL and other libraries. <br><br>
-            It's my first time working with OpenGL, or any 3D graphics library, so it is quite challenging, but I'm always up for a challenge, especially one as fun as this. <br>
-            I'm going to be using this page to continually update my progress on the engine. I will include screenshots and possibly videos, as well as analysis of what is going on. <br>
-            This is meant to be a low-level game engine, so I won't be adding scripting functionality on top of C++. This is a slow process since I'm still learning a lot about <br>
-            OpenGL and C++, but it should be interesting. <br>
-        </p>
+        <main>
+            <br>
 
-        <img src="opengl.png" alt="OpenGL Logo" style="height: 17.5%; width: 17.5%;"></img>
-
-        <br><br>
-
-        <p>
-            So far, I have the engine setup to start creating new projects and I can display models and a skybox, as well as lighting that affects the models using <br>
-            shaders. <br><br>
-            Here are some screenshots:
-        </p>
-
-        <table>
-            <img src="nifty-skybox.png" alt="Skybox in Nifty Engine" style="height: 50%; width: 50%;"></img>
-            <img src="nifty-testscene.png" alt="Test Scene in Nifty Engine" style="height: 50%; width: 50%;"></img>
-        </table>
-
-        <br><br>
-
-        <p>
-            Next, I plan to work on adding a few layers of physics, including forces (such as gravity) and collision. I already have gravity partially implemented, <br>
-            but adding collision is much more difficult.
-        </p>
-
+            <h1>Nifty Engine</h1>
+    
+            <!-- INTRODUCTION TO ENGINE -->
+            <p>
+                Nifty Engine is a 3D game engine that I am currently developing in C++ using OpenGL and other libraries. <br><br>
+                It's my first time working with OpenGL, or any 3D graphics library, so it is quite challenging, but I'm always up for a challenge, especially one as fun as this. <br>
+                I'm going to be using this page to continually update my progress on the engine. I will include screenshots and possibly videos, as well as analysis of what is going on. <br>
+                This is meant to be a low-level game engine, so I won't be adding scripting functionality on top of C++. This is a slow process since I'm still learning a lot about <br>
+                OpenGL and C++, but it should be interesting. <br>
+            </p>
+    
+            <img src="opengl.png" alt="OpenGL Logo" style="height: 17.5%; width: 17.5%;"></img>
+    
+            <br><br>
+    
+            <p>
+                So far, I have the engine setup to start creating new projects and I can display models and a skybox, as well as lighting that affects the models using <br>
+                shaders. <br><br>
+                Here are some screenshots:
+            </p>
+    
+            <table>
+                <img src="nifty-skybox.png" alt="Skybox in Nifty Engine" style="height: 50%; width: 50%;"></img>
+                <img src="nifty-testscene.png" alt="Test Scene in Nifty Engine" style="height: 50%; width: 50%;"></img>
+            </table>
+    
+            <br><br>
+    
+            <p>
+                Next, I plan to work on adding a few layers of physics, including forces (such as gravity) and collision. I already have gravity partially implemented, <br>
+                but adding collision is much more difficult.
+            </p>    
+        </main>
+        
     </body>
 </html>
 
