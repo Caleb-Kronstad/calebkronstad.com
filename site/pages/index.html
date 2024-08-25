@@ -1,0 +1,97 @@
+<style>
+
+    html {
+        font-size: 14px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: rgb(251, 247, 235);
+    }
+    
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 3rem;
+        font: 1rem Helvetica;
+    }
+
+    .navigation{
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: fixed;
+        padding: 1%;
+        background-color: rgb(253, 228, 190);
+    }
+
+    .title{
+        width: 100%;
+        left: 0;
+        top: 50;
+        padding: 1%;
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    nav {
+        line-height: 1.5rem;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    nav > * {
+        text-wrap: nowrap;
+        padding: 1%;
+    }
+
+    .nav-btn {
+        border-radius: 3px;
+        background-color: rgb(251, 247, 235);
+        border: 2px solid rgb(196, 176, 146);
+        padding-top: 5;
+        padding-bottom: 5;
+    }
+
+    .nav-btn:hover {
+        background-color: rgb(219, 191, 182);
+    }
+
+</style>
+
+<head><link rel="icon" href="financeproject/c_key.png"><title>Home</title></head>
+
+<html>
+    <body>
+        <header class="navigation">
+            <nav> 
+                <button class="nav-btn" id="btn1"><b>ABOUT</b></button>  
+                <button class="nav-btn" id="btn2"><b>NIFTY ENGINE</b></button>  
+                <button class="nav-btn" id="btn3"><b>EPF PROJECT</b></button>  
+                <button class="nav-btn" id="btn4"><b>BOID SIMULATION</b></button>
+                <!-- <a href="acozychristmas\a-cozy-christmas.html">A Cozy Christmas - First game I've ever released!</a> -->
+            </nav>
+        </header>
+
+        <header class="title">
+            <h1 style="color: rgb(155, 119, 107);">CALEB KRONSTAD</h1>
+            <img src="fixing_problems.png" alt="joke"></img>
+        </header>
+        
+        <br><br>
+    </body>
+</html>
+
+<script>
+    document.getElementById("btn1").onclick = function() {
+        location.href = "about.html";
+    };
+    document.getElementById("btn2").onclick = function() {
+        location.href = "niftyengine\\nifty-engine.html";
+    };
+    document.getElementById("btn3").onclick = function() {
+        location.href = "financeproject\\mypossiblefuture.html"
+    };
+    document.getElementById("btn4").onclick = function() {
+        location.href = "boids\\boids.html"
+    };
+    
+</script>
