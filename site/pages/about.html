@@ -15,12 +15,6 @@
     h1 {
         font-size: 3rem;
     }
-    
-    
-    nav {
-        line-height: 2rem;
-        font-size: 1.25rem;
-    }
 
     #main-text {
         font-size: 1.25rem;
@@ -43,6 +37,29 @@
         padding: 1%;
         background-color: rgb(253, 228, 190);
     }
+    
+    nav {
+        line-height: 1.5rem;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    nav > * {
+        text-wrap: nowrap;
+        padding: 1%;
+    }
+
+    .nav-btn {
+        border-radius: 3px;
+        background-color: rgb(251, 247, 235);
+        border: 2px solid rgb(196, 176, 146);
+        padding-top: 5;
+        padding-bottom: 5;
+    }
+
+    .nav-btn:hover {
+        background-color: rgb(219, 191, 182);
+    }
 
 </style>
 
@@ -52,7 +69,7 @@
     <body>
         <header class="navigation">
             <nav>
-                ⬅️<a href="index.html">calebkronstad.com</a><br>
+                <button class="nav-btn" id="btn1"><b>HOME</b></button>  
             </nav>
         </header>
 
@@ -82,5 +99,8 @@
 </html>
 
 <script>
+    document.getElementById("btn1").onclick = function() {
+        location.href = "index.html";
+    };
     
 </script>
