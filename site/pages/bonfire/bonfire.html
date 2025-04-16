@@ -1,0 +1,127 @@
+<style>
+
+    html {
+        font-size: 14px;
+        overflow-x: hidden;
+        background-color: rgb(251, 247, 235);
+    }
+    
+    body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+        margin: 3rem;
+        font: 1rem Helvetica, sans-serif;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #main-text {
+        font-size: 1.5rem;
+    }
+
+    #title {
+        text-align: center;
+        color: rgb(155, 119, 107);
+    }
+
+    #title h1 {
+        font-size: 5rem;
+    }
+
+    .title-wrapper {
+        display: grid;
+        gap: 3rem;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 20rem);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .main-wrapper {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        background-color: rgb(189, 160, 150);
+        width: 100%;
+        left: 0;
+        position: absolute;
+        height: 200%
+    }
+
+    .navigation{
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: fixed;
+        padding: 1%;
+        background-color: rgb(253, 228, 190);
+    }
+    
+    nav {
+        line-height: 1.5rem;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    nav > * {
+        text-wrap: nowrap;
+        padding: 1%;
+    }
+
+    .nav-btn {
+        border-radius: 3px;
+        background-color: rgb(251, 247, 235);
+        border: 2px solid rgb(196, 176, 146);
+        padding-top: 5;
+        padding-bottom: 5;
+    }
+
+    .nav-btn:hover {
+        background-color: rgb(219, 191, 182);
+    }
+
+    #in-progress {
+        text-align: center;
+    }
+
+    #current-features {
+        text-align: center;
+    }
+
+</style>
+
+<head><link rel="icon" href="opengl.png"><title>Nifty Engine</title></head>
+
+<html>
+    <body>
+        <header class="navigation">
+            <nav> 
+                <button class="nav-btn" id="btn1"><b>HOME</b></button>  
+                <button class="nav-btn" id="btn2"><b>IN PROGRESS</b></button>  
+                <button class="nav-btn" id="btn3"><b>CURRENT FEATURES</b></button>
+            </nav>
+        </header>
+
+        <main>
+        </main>
+        
+    </body>
+</html>
+
+<script>
+    document.getElementById("current-features").style.display = "none";
+    
+    document.getElementById("btn1").onclick = function() {
+        location.href = "../index.html";
+    };
+    document.getElementById("btn2").onclick = function() {
+        document.getElementById("in-progress").style.display = "initial";
+        document.getElementById("current-features").style.display = "none";
+    };
+    document.getElementById("btn3").onclick = function() {
+        document.getElementById("in-progress").style.display = "none";
+        document.getElementById("current-features").style.display = "initial";
+    };
+</script>
