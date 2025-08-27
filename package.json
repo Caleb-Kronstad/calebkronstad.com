@@ -11,7 +11,7 @@
     },
     "scripts": {
       "build:site": "eleventy --quiet",
-      "build": "npc run build:site",
+      "build": "npm run build:site",
       "watch:site": "eleventy --serve",
       "watch": "npm run watch:site",
       "serve": "env DEV=true eleventy --quiet --incremental"
