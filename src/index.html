@@ -1,75 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="bonfire_pixel.png">
+    <title>Home</title>
+</head>
+
 <style>
 
-    html {
+    html
+    {
         font-size: 1vw;
         overflow-x: hidden;
         background-color: rgb(18, 5, 0);
     }
 
-    body {
+    body
+    {
         overflow-x: hidden;
         overflow-y: hidden;
-        margin: 3vw;
+        margin: 5vh;
         font: 1em Helvetica;
     }
 
-    .navigation{
+    .navigation
+    {
         width: 100%;
         left: 0;
         top: 0;
         position: fixed;
-        padding: 1vh;
+        padding: 1vh 0;
         background-color: rgb(45, 13, 1);
         z-index: 1000;
     }
 
-    .title{
+    .title
+    {
         width: 100%;
         left: 0;
         top: 50;
         padding: 1vh;
         text-align: center;
-        font-size: 5vw;
+        font-size: 4vw;
         color: rgb(128, 38, 21);
     }
 
-    nav {
-        line-height: 1.5em;
+    nav
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        line-height: 1.5vh;
         font-size: 1.25vw;
         text-align: center;
     }
 
-    nav > * {
+    nav > *
+    {
         text-wrap: nowrap;
-        padding: 1vh;
         min-width: 50px;
         min-height: 10px;
+        padding: 0.5vh 1vw;
     }
 
-    .nav-btn {
-        border-radius: 0.3vw;
+    .nav-btn
+    {
+        border-radius: 0.2vw;
         background-color: #541801;
-        border: 0.2vw solid #2c1100;
+        border: 0.1vw solid #541801;
         color: #a93c20;
-        padding-top: 0.5vh;
-        padding-bottom: 0.5vh;
-        padding-left: 1vw;
-        padding-right: 1vw;
+        margin: 0.25vw 0.25vw;
     }
 
-    .nav-btn:hover {
+    .nav-btn:hover
+    {
         background-color: rgb(65, 19, 1);
-        transform: scale(1.1) perspective(1px);
+        border: 0.1vw solid #541801;
+        transform: scale(1) perspective(1px);
         color: #be481b;
     }
 
-    .title h1 {
+    .title h1
+    {
         position: relative;
         z-index: 20;
         margin: 10vh 0;
     }
 
-    .title img {
+    .title img
+    {
         position: fixed;
         bottom: 0;
         left: 50%;
@@ -79,9 +98,29 @@
         max-height: 60vh;
      }
 
-</style>
 
-<head><link rel="icon" href="financeproject/c_key.png"><title>Home</title></head>
+    /* Mobile */
+    @media screen and (max-width: 768px) {
+        nav {
+            font-size: 16px;
+            gap: 0.5rem;
+        }
+
+        .nav-btn {
+            min-width: 120px;
+            min-height: 44px;
+            font-size: 16px;
+            margin: 0.25rem;
+            border-radius: 0.5rem;
+            border-width: 2px;
+        }
+
+        .title h1 {
+            margin: 20vh 0;
+        }
+    }
+
+</style>
 
 <html>
     <body>
