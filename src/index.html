@@ -1,5 +1,5 @@
-<body>
 <style>
+
     html {
         font-size: 1vw;
         overflow-x: hidden;
@@ -35,13 +35,15 @@
 
     nav {
         line-height: 1.5em;
-        font-size: 1.5vw;
+        font-size: 1.25vw;
         text-align: center;
     }
 
     nav > * {
         text-wrap: nowrap;
         padding: 1vh;
+        min-width: 50px;
+        min-height: 10px;
     }
 
     .nav-btn {
@@ -64,6 +66,7 @@
     .title h1 {
         position: relative;
         z-index: 20;
+        margin: 10vh 0;
     }
 
     .title img {
@@ -74,109 +77,32 @@
         z-index: 10;
         max-width: 50vw;
         max-height: 60vh;
-    }
+     }
 
-    @media (max-width: 768px) {
-        html {
-            font-size: 3vw;
-        }
-
-        .title {
-            font-size: 12vw;
-            padding: 2vh 1vw;
-        }
-
-        nav {
-            font-size: 4vw;
-            padding: 1vh 0;
-        }
-
-        .nav-btn {
-            margin: 0.5vh;
-            padding: 2vh 3vw;
-            font-size: 4vw;
-            border-radius: 1vw;
-            border: 0.4vw solid #2c1100;
-            min-height: 44px;
-            min-width: 44px;
-        }
-
-        body {
-            margin: 2vw;
-            margin-top: 15vh;
-        }
-
-        .navigation {
-            padding: 2vh 1vw;
-        }
-
-        .title img {
-            max-width: 80vw;
-            max-height: 40vh;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .title {
-            font-size: 15vw;
-            margin-top: 5vh;
-        }
-
-        .nav-btn {
-            display: block;
-            width: 90%;
-            margin: 1vh auto;
-            padding: 3vh 2vw;
-            font-size: 5vw;
-        }
-
-        nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        body {
-            margin: 1vw;
-            margin-top: 25vh;
-        }
-
-        .navigation {
-            padding: 2vh 1vw;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        html {
-            font-size: 0.8vw;
-        }
-
-        .title {
-            font-size: 4vw;
-        }
-
-        nav {
-            font-size: 1.2vw;
-        }
-    }
 </style>
 
-<header class="navigation">
-    <nav>
-        <button class="nav-btn" id="about-btn"><b>ABOUT</b></button>
-        <button class="nav-btn" id="projects-btn"><b>PROJECTS</b></button>
-        <button class="nav-btn" id="hobbies-btn"><b>HOBBIES</b></button>
-        <button class="nav-btn" id="contact-btn"><b>CONTACT</b></button>
-        <!-- <a href="acozychristmas\a-cozy-christmas.html">A Cozy Christmas - First game I've ever released!</a> -->
-    </nav>
-</header>
+<head><link rel="icon" href="financeproject/c_key.png"><title>Home</title></head>
 
-<header class="title">
-    <h1>CALEB KRONSTAD</h1>
-    <img src="bonfire_pixel.png" alt="joke"></img>
-</header>
+<html>
+    <body>
+        <header class="navigation">
+            <nav>
+                <button class="nav-btn" id="about-btn"><b>ABOUT</b></button>
+                <button class="nav-btn" id="projects-btn"><b>PROJECTS</b></button>
+                <button class="nav-btn" id="hobbies-btn"><b>HOBBIES</b></button>
+                <button class="nav-btn" id="contact-btn"><b>CONTACT</b></button>
+                <!-- <a href="acozychristmas\a-cozy-christmas.html">A Cozy Christmas - First game I've ever released!</a> -->
+            </nav>
+        </header>
 
-<br><br>
+        <header class="title">
+            <h1>CALEB KRONSTAD</h1>
+            <img src="bonfire_pixel.png" alt="joke"></img>
+        </header>
+
+        <br><br>
+    </body>
+</html>
 
 <script>
     document.getElementById("about-btn").onclick = function() {
@@ -192,5 +118,3 @@
         location.href = "contact\\index.html"
     };
 </script>
-</body>
-</html>
