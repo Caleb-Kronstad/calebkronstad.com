@@ -1,17 +1,16 @@
 <style>
 
     html {
-        font-size: 14px;
+        font-size: 1vw;
         overflow-x: hidden;
-        overflow-y: hidden;
-        background-color: rgb(251, 247, 235);
+        background-color: rgb(18, 5, 0);
     }
-    
+
     body {
         overflow-x: hidden;
         overflow-y: hidden;
-        margin: 3rem;
-        font: 1rem Helvetica;
+        margin: 3vw;
+        font: 1em Helvetica;
     }
 
     .navigation{
@@ -19,43 +18,64 @@
         left: 0;
         top: 0;
         position: fixed;
-        padding: 1%;
-        color: rgb(135, 99, 87);
-        background-color: rgb(253, 228, 190);
+        padding: 1vh;
+        background-color: rgb(45, 13, 1);
+        z-index: 1000;
     }
 
     .title{
         width: 100%;
         left: 0;
         top: 50;
-        padding: 1%;
+        padding: 1vh;
         text-align: center;
-        font-size: 5rem;
-        color: rgb(125, 89, 77);
+        font-size: 5vw;
+        color: rgb(128, 38, 21);
     }
-    
+
     nav {
-        line-height: 1.5rem;
-        font-size: 1.25rem;
+        line-height: 1.5em;
+        font-size: 1.25vw;
         text-align: center;
     }
 
     nav > * {
         text-wrap: nowrap;
-        padding: 1%;
+        padding: 1vh;
     }
 
     .nav-btn {
-        border-radius: 3px;
-        background-color: rgb(251, 247, 235);
-        border: 2px solid rgb(196, 176, 146);
-        padding-top: 5;
-        padding-bottom: 5;
+        border-radius: 0.3vw;
+        background-color: #541801;
+        border: 0.2vw solid #2c1100;
+        color: #a93c20;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
 
     .nav-btn:hover {
-        background-color: rgb(219, 191, 182);
+        background-color: rgb(65, 19, 1);
+        transform: scale(1.1) perspective(1px);
+        color: #be481b;
     }
+
+    .title h1 {
+        position: relative;
+        z-index: 20;
+        margin: 10vh 0;
+    }
+
+    .title img {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        max-width: 50vw;
+        max-height: 60vh;
+     }
 
 </style>
 
@@ -64,7 +84,7 @@
 <html>
     <body>
         <header class="navigation">
-            <nav> 
+            <nav>
                 <button class="nav-btn" id="about-btn"><b>ABOUT</b></button>
                 <button class="nav-btn" id="projects-btn"><b>PROJECTS</b></button>
                 <button class="nav-btn" id="hobbies-btn"><b>HOBBIES</b></button>
@@ -75,9 +95,9 @@
 
         <header class="title">
             <h1>CALEB KRONSTAD</h1>
-            <img src="fixing_problems.png" alt="joke"></img>
+            <img src="bonfire_pixel.png" alt="joke"></img>
         </header>
-        
+
         <br><br>
     </body>
 </html>
@@ -95,5 +115,4 @@
     document.getElementById("contact-btn").onclick = function() {
         location.href = "contact\\index.html"
     };
-    
 </script>
