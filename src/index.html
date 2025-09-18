@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="bonfire_pixel.png">
+    <link rel="icon" href="bonfire.png">
     <title>Home</title>
 </head>
 
@@ -98,7 +98,7 @@
         max-height: 60vh;
     }
 
-    #bonfire
+    #bonfire-animation
     {
         position: fixed;
         bottom: 0;
@@ -154,8 +154,8 @@
 
         <header class="title">
             <h1>CALEB KRONSTAD</h1>
-            <img id="bonfire-background" src="bonfire.png" alt="joke">
-            <img id="bonfire" src="bonfire-transparent.png" alt="joke">
+            <img id="bonfire-background" src="bonfire-background.png" alt="joke">
+            <img id="bonfire-animation" src="bonfire-animation.gif" alt="joke">
         </header>
 
         <br><br>
@@ -214,7 +214,7 @@
             this.canvas.height = window.innerHeight;
             this.spawnX = this.canvas.width / 2;
             this.spawnY = this.canvas.height - 100;
-            this.spawnRadius = 75;
+            this.spawnRadius = 50;
         }
 
         createEmber() {
@@ -236,7 +236,7 @@
 
         update() {
             if (Math.random() < 0.02) { // 2% chance each frame
-                if (this.embers.length <= 5) {
+                if (this.embers.length <= 10) {
                     this.embers.push(this.createEmber());
                 }
             }
