@@ -248,23 +248,16 @@
                 ember.y += ember.y_velocity;
 
                 ember.x_velocity += (Math.random() - 0.5) * 0.02;
-
-                // Gradually slow upward movement (like cooling)
                 ember.y_velocity += 0.0005;
 
-                // Update life
                 ember.life -= 0.005 / ember.maxLife;
-
-                // Add flickering
                 ember.flicker = Math.random() * 0.5 + 0.5;
 
-                // Remove dead embers
                 if (ember.life <= 0 || ember.y < -10) {
                     this.embers.splice(i, 1);
                 }
             }
 
-            // Limit max embers for performance
             if (this.embers.length > 100) {
                 this.embers.splice(0, this.embers.length - 100);
             }
@@ -274,13 +267,11 @@
             // Clear canvas
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-            // Draw each ember
             this.embers.forEach(ember => {
                 const opacity = ember.life * ember.flicker;
                 this.ctx.globalAlpha = opacity;
                 this.ctx.fillStyle = ember.color;
 
-                // Draw simple square pixel for retro effect
                 const size = ember.size * this.pixelSize;
                 this.ctx.fillRect(ember.x, ember.y, size, size);
             });
@@ -295,7 +286,6 @@
         }
     }
 
-    // Initialize ember system when page loads
     document.addEventListener('DOMContentLoaded', () => {
         new EmberSystem();
     });
