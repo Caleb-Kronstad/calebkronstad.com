@@ -10,19 +10,72 @@
 
 <style>
 
-    html
+    .title
     {
-        font-size: 1vw;
-        overflow-x: hidden;
-        background-color: rgb(18, 5, 0);
+        display: flex;
+        justify-content: left;
+        margin-left: 32.5%;
+        color: #bc4a34;
     }
 
-    body
+    .project-container
     {
-        overflow-x: hidden;
-        overflow-y: hidden;
-        margin: 5vh;
-        font: 1em Helvetica;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+    .project
+    {
+        width: 16vw;
+        height: 14vw;
+        color: #cd653f;
+    }
+    .project-image
+    {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+    .project-title
+    {
+        margin: 0.5vh;
+        color: #cd653f;
+    }
+    .project-description
+    {
+        margin: 0.5vh;
+        color: #804c39;
+        font-size: 90%;
+    }
+
+    
+    /* Mobile */
+    @media screen and (max-width: 768px) {
+        body
+        {
+            padding-top: 20vh;
+        }
+        
+        .title
+        {
+            margin-left: 5%;
+            font-size: 16px;
+        }
+        .project-title
+        {
+            font-size: 16px;
+        }
+        .project-description
+        {
+            font-size: 12px;
+        }
+        .project
+        {
+            width: 40vw;
+            height: 36vw;
+        }
     }
 
 </style>
@@ -33,18 +86,40 @@
         <header class="navigation">
             <nav>
                 <button class="nav-btn" id="home-btn"><b>HOME</b></button>
+                <button class="nav-btn" id="projects-btn"><b>PROJECTS</b></button>
+                <button class="nav-btn" id="hobbies-btn"><b>HOBBIES</b></button>
+                <button class="nav-btn" id="contact-btn"><b>CONTACT</b></button>
             </nav>
         </header>
         
-        <p>
-            Page under construction
-        </p>
+        <h3 class="title">Projects</h3>
+        <br>
+        <div class="project-container">
+            <div class="project">
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Bonfire</a>
+                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+            </div>
+            <div class="project">
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Bonfire</a>
+                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+            </div>
+        </div>
+        <div class="project-container">
+            <div class="project">
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Bonfire</a>
+                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+            </div>
+            <div class="project">
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Bonfire</a>
+                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+            </div>
+        </div>
         
     </body>
 </html>
 
-<script>
-    document.getElementById("home-btn").onclick = function() {
-        location.href = "../index.html";
-    };
-</script>
+<script src="../script/nav.js"></script>

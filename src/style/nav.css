@@ -1,3 +1,18 @@
+html
+{
+    overflow-x: hidden;
+    background-color: #120401;
+}
+
+body
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 5vh;
+    font: 1vw Helvetica;
+    padding-top: 2vw;
+}
+
 nav
 {
     display: flex;
@@ -15,7 +30,7 @@ nav
     top: 0;
     position: fixed;
     padding: 1vh 0;
-    background-color: rgb(45, 13, 1);
+    background-color: #2d0d01;
     z-index: 1000;
 }
 
@@ -42,4 +57,21 @@ nav > *
     border: 0.1vw solid #541801;
     transform: scale(1) perspective(1px);
     color: #be481b;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    nav {
+        font-size: 16px;
+        gap: 0.5rem;
+    }
+
+    .nav-btn {
+        min-width: 120px;
+        min-height: 44px;
+        font-size: 16px;
+        margin: 0.25rem;
+        border-radius: 0.5rem;
+        border-width: 2px;
+    }
 }
