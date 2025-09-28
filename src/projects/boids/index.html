@@ -91,7 +91,7 @@
     
                         <p>
                             In 1986 Craig Reynolds developed the boid flocking model using three properties that he calls steering behaviors. These three behaviors that control 
-                            and define the model are separation, alignment, and cohesion. Each behavior is applied to the boid’s velocity vector as a force vector, and as such 
+                            and define the model are separation, alignment, and cohesion. Each behavior is applied to the boid's velocity vector as a force vector, and as such 
                             can be sufficiently modeled using the Euler method.<sup>1</sup>
                         </p>
     
@@ -111,10 +111,10 @@
                         <br>
     
                         <p>
-                            Separation gets the surrounding boids’ positions then moves the focused boid away from the others. Alignment gets the surrounding boids’ 
-                            velocities then applies those to the focused boid to steer it in the same direction as others. Cohesion gets the surrounding boids’ positions then 
+                            Separation gets the surrounding boids' positions then moves the focused boid away from the others. Alignment gets the surrounding boids' 
+                            velocities then applies those to the focused boid to steer it in the same direction as others. Cohesion gets the surrounding boids' positions then 
                             moves the focused boid towards the average position. These calculations are performed on only the boids within a certain distance of the focused boid, 
-                            shown in the images above by the gray area. Reynolds calls this area the ‘neighborhood’ and boids within ‘local flockmates’. Although boids are a great 
+                            shown in the images above by the gray area. Reynolds calls this area the 'neighborhood' and boids within 'local flockmates'. Although boids are a great 
                             way to simulate flocking birds or fish in video games or movies, they miss detail that can be seen within flocking in the real world, such as the 
                             fact that many bird flocks have a leader directing them.
                             <br><br>
@@ -130,11 +130,11 @@
                             huge performance problem. In order to solve this issue, I switched the list to a dictionary and put sub dictionaries within the main one. Each sub dictionary 
                             corresponds to a grid cell on the screen, and each frame the boid checks which cell it is currently in. The boid only loops through the cell it is currently in 
                             to determine boids that are currently near it, which increases the FPS by 0-25 depending on how many boids are in each section. This is essentially splitting 
-                            it into what the game development world likes to call ‘chunks’. 
+                            it into what the game development world likes to call 'chunks'. 
                             <br><br>
                             Numpy is a great library for mathematical calculations, but along with the functionality comes a lot of bloat. I was using Numpy for a while when first 
-                            developing the simulation, but I eventually found it was the source of possibly 30-40 FPS loss. This came primarily from the ‘norm’ function from Numpy’s 
-                            ‘linalg’ sub library. As a solution, I created my own normalize function, which contains a lot less bloat than Numpy’s, resulting in increases of up to 40 
+                            developing the simulation, but I eventually found it was the source of possibly 30-40 FPS loss. This came primarily from the 'norm' function from Numpy's 
+                            'linalg' sub library. As a solution, I created my own normalize function, which contains a lot less bloat than Numpy's, resulting in increases of up to 40 
                             FPS. The biggest performance improvement that can be done with boids is by using compute shaders, but since Pygame does not have access to the GPU this cannot 
                             be implemented. 
                             <br><br>
@@ -177,10 +177,10 @@
                     <br>
                     <b><p style="font-size: 1.25rem;">References</p></b>
                     <ol style="font-size: 1.1rem; line-height: 2rem">
-                        <li>Reynolds, Craig. “Boids.” Red3d, 1995, www.red3d.com/cwr/boids/.</li>
-                        <li>Lague, Sebastian. “Coding Adventure: Boids.” YouTube, 26 Aug. 2019, www.youtube.com/watch?v=bqtqltqcQhw&t=118s.</li>
-                        <li>The Coding Train. “Coding Challenge #124: Flocking Simulation.” YouTube, 11 Dec. 2018, www.youtube.com/watch?v=mhjuuHl6qHM.</li>
-                        <li>Gavin. “How Do You Detect Where Two Line Segments Intersect?” Stack Overflow, 28 Dec. 2009, stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect.</li>
+                        <li>Reynolds, Craig. "Boids." Red3d, 1995, www.red3d.com/cwr/boids/.</li>
+                        <li>Lague, Sebastian. "Coding Adventure: Boids." YouTube, 26 Aug. 2019, www.youtube.com/watch?v=bqtqltqcQhw&t=118s.</li>
+                        <li>The Coding Train. "Coding Challenge #124: Flocking Simulation." YouTube, 11 Dec. 2018, www.youtube.com/watch?v=mhjuuHl6qHM.</li>
+                        <li>Gavin. "How Do You Detect Where Two Line Segments Intersect?" Stack Overflow, 28 Dec. 2009, stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect.</li>
                     </ol>
                 </div>
 
