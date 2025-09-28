@@ -6,16 +6,43 @@
     <title>Home</title>
     
     <link rel="stylesheet" type="text/css" href="style/nav.css">
+
+    <!-- Preload -->
+    <link rel="preload" href="resources/optimusprinceps/OptimusPrinceps.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 
 <style>
+    @font-face {
+        font-family: 'Optimus Princeps';
+        src: url('resources/optimusprinceps/OptimusPrinceps.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    html
+    {
+        overflow-x: hidden;
+        background-color: #120401;
+        scrollbar-gutter: stable both-edges;
+    }
+
+    body
+    {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 5vh;
+        font-family: Helvetica;
+        font-size: 1vw;
+        padding-top: 2vw;
+    }
     
     .title
     {
         width: 100%;
         padding-top: 1vh;
-        text-align: center;
         font-size: 4vw;
+        text-align: center;
         color: #802615;
     }
 
@@ -31,7 +58,8 @@
     {
         margin: 0.5vh;
         font-size: 30%;
-        color: #944528;
+        color: #802615;
+        font-family: monospace;
     }
 
     #bonfire-background
@@ -88,7 +116,7 @@
 
         <header class="title">
             <h1>CALEB KRONSTAD</h1>
-            <p>ENGINE/GAMEPLAY PROGRAMMER</p>
+            <p>GRAPHICS PROGRAMMER</p>
             <img id="bonfire-background" src="resources/bonfire-background.png" alt="background">
             <img id="bonfire-animation" src="resources/bonfire-animation.gif" alt="animation">
         </header>

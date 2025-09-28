@@ -9,6 +9,20 @@
 </head>
 
 <style>
+    html
+    {
+        overflow-x: hidden;
+        background-color: #120401;
+        scrollbar-gutter: stable both-edges;
+    }
+
+    body
+    {
+        overflow-x: hidden;
+        margin: 5vh;
+        font-family: Helvetica;
+        padding-top: 2vw;
+    }
 
     .title
     {
@@ -24,12 +38,12 @@
         justify-content: center;
         align-items: center;
         gap: 2vw;
+        width: 100%;
     }
     .project
     {
         width: 16vw;
         height: 14vw;
-        color: #cd653f;
     }
     .project-image
     {
@@ -41,13 +55,17 @@
     .project-title
     {
         margin: 0.5vh;
-        color: #cd653f;
+        color: #bc4a34;
+    }
+    .project-title:visited
+    {
+        color: #bc4a34;
     }
     .project-description
     {
         margin: 0.5vh;
         color: #804c39;
-        font-size: 90%;
+        font-size: 80%;
     }
 
     
@@ -96,26 +114,50 @@
         <br>
         <div class="project-container">
             <div class="project">
-                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
-                <a href="bonfire/index.html" class="project-title">Bonfire</a>
-                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Bonfire (WIP)</a>
+                <p class="project-description">A 3D game engine made using C++ and OpenGL, with a focus on architecture and performance</p>
             </div>
             <div class="project">
-                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
-                <a href="bonfire/index.html" class="project-title">Bonfire</a>
-                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+                <a href="boids/index.html"><img class="project-image" src="../resources/boids.gif"></a>
+                <a href="boids/index.html" class="project-title">Boids Simulation</a>
+                <p class="project-description">A simulation of Boids created using Python and PyGame, includes usage in a demo game</p>
             </div>
         </div>
         <div class="project-container">
             <div class="project">
-                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
-                <a href="bonfire/index.html" class="project-title">Bonfire</a>
-                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+                <a href="nifty-engine/index.html"><img class="project-image" src="../resources/nifty.gif"></a>
+                <a href="nifty-engine/index.html" class="project-title">Nifty Engine</a>
+                <p class="project-description">A 3D game engine made using C++ and OpenGL, with a focus on user interaction and experience</p>
             </div>
             <div class="project">
-                <a href="bonfire/index.html"><img class="project-image" src="../resources/bonfire-animation.gif"></a>
-                <a href="bonfire/index.html" class="project-title">Bonfire</a>
-                <p class="project-description">A 3D game engine made using C++ and OpenGL</p>
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/watchpoint.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Watchpoint</a>
+                <p class="project-description">A 2D stealth game made in Unity for Sock Jam 1</p>
+            </div>
+        </div>
+        <div class="project-container">
+            <div class="project">
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/unstable-arena.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Unstable Arena (WIP)</a>
+                <p class="project-description">A 3D arena fighting game made in Unreal Engine for Game Developers @ UNCC Fall Game Jam 2025</p>
+            </div>
+            <div class="project">
+                <a href="bonfire/index.html"><img class="project-image" src="../resources/bucket-game.gif"></a>
+                <a href="bonfire/index.html" class="project-title">Bucket Game</a>
+                <p class="project-description">A 2D combat game made in Unity for Sock Jam 2</p>
+            </div>
+        </div>
+        <div class="project-container">
+            <div class="project">
+                <a href="acozychristmas/index.html"><img class="project-image" src="../resources/cozy-christmas.gif"></a>
+                <a href="acozychristmas/index.html" class="project-title">A Cozy Christmas</a>
+                <p class="project-description">A 3D horror game made in 3 days using Unity</p>
+            </div>
+            <div class="project">
+                <a href="bonfire/index.html"></a>
+                <a href="bonfire/index.html" class="project-title"></a>
+                <p class="project-description"></p>
             </div>
         </div>
         
