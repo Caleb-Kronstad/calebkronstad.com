@@ -25,6 +25,70 @@
         padding-top: 2vw;
     }
 
+    p
+    {
+        color: #bc4a34;
+        position: relative;
+        z-index: 20;
+        text-align: center;
+        margin-top: 20vh;
+        font-size: 2vw;
+    }
+
+    #bonfire-background
+    {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        max-width: 50vw;
+        max-height: 60vh;
+    }
+
+    #bonfire-animation
+    {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 12;
+        max-width: 50vw;
+        max-height: 60vh;
+    }
+
+    #ember-canvas {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: none;
+        z-index: 11;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 768px) {
+        body
+        {
+            margin: 0;
+            margin-top: 15vh;
+            padding: 2vh;
+            padding-top: 2vh;
+        }
+
+        p
+        {
+            font-size: 5vw;
+        }
+
+        #bonfire-background,
+        #bonfire-animation
+        {
+            max-width: 80vw;
+            max-height: 50vh;
+        }
+    }
+
 </style>
 
 <html>
@@ -39,12 +103,13 @@
             </nav>
         </header>
         
-        <p>
-            Page under construction
-        </p>
+        <p>Page under construction</p>
         
+        <img id="bonfire-background" src="../resources/bonfire-background.png" alt="background">
+        <img id="bonfire-animation" src="../resources/bonfire-animation.gif" alt="animation">
+        <canvas id="ember-canvas"></canvas>
     </body>
 </html>
 
-
 <script src="../script/nav.js"></script>
+<script src="../script/ember_system.js"></script>

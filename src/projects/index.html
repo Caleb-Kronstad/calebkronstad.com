@@ -16,7 +16,6 @@
     <link rel="preload" href="../resources/bucket-game.gif" as="image" type="image/gif">
     <link rel="preload" href="../resources/cozy-christmas.gif" as="image" type="image/gif">
 </head>
-</head>
 
 <style>
     html
@@ -41,6 +40,8 @@
         justify-content: left;
         margin-left: 32.5%;
         color: #bc4a34;
+        position: relative;
+        z-index: 20;
     }
 
     .project-container
@@ -50,6 +51,8 @@
         align-items: center;
         gap: 2vw;
         width: 100%;
+        position: relative;
+        z-index: 20;
     }
     .project
     {
@@ -77,6 +80,37 @@
         margin: 0.5vh;
         color: #804c39;
         font-size: 80%;
+    }
+
+    #bonfire-background
+    {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        max-width: 50vw;
+        max-height: 60vh;
+    }
+
+    #bonfire-animation
+    {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 12;
+        max-width: 50vw;
+        max-height: 60vh;
+    }
+
+    #ember-canvas {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: none;
+        z-index: 11;
     }
 
     
@@ -125,6 +159,13 @@
         .project-description
         {
             font-size: 4vw;
+        }
+
+        #bonfire-background,
+        #bonfire-animation
+        {
+            max-width: 80vw;
+            max-height: 50vh;
         }
     }
 
@@ -193,7 +234,11 @@
             </div>
         </div>
         
+        <img id="bonfire-background" src="../resources/bonfire-background.png" alt="background">
+        <img id="bonfire-animation" src="../resources/bonfire-animation.gif" alt="animation">
+        <canvas id="ember-canvas"></canvas>
     </body>
 </html>
 
 <script src="../script/nav.js"></script>
+<script src="../script/ember_system.js"></script>

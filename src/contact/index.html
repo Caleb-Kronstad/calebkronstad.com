@@ -30,6 +30,8 @@
         display: flex;
         justify-content: left;
         margin-left: 32.5%;
+        position: relative;
+        z-index: 20;
     }
     h3
     {
@@ -60,6 +62,8 @@
         font-size: 1.25vw;
         text-align: center;
         margin-right: 22.5%;
+        position: relative;
+        z-index: 20;
     }
     .external > *
     {
@@ -93,6 +97,37 @@
         border: 0.1vw solid #541801;
         transform: scale(1.1) perspective(1px);
         color: #be481b;
+    }
+
+    #bonfire-background
+    {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        max-width: 50vw;
+        max-height: 60vh;
+    }
+
+    #bonfire-animation
+    {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 12;
+        max-width: 50vw;
+        max-height: 60vh;
+    }
+
+    #ember-canvas {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: none;
+        z-index: 11;
     }
 
     @media screen and (max-width: 768px) {
@@ -145,6 +180,18 @@
             border-radius: 2vw;
             margin: 1vw;
         }
+
+        #bonfire-background
+        {
+            max-width: 80vw;
+            max-height: 50vh;
+        }
+
+        #bonfire-animation
+        {
+            max-width: 80vw;
+            max-height: 50vh;
+        }
     }
 
 </style>
@@ -172,6 +219,10 @@
         </div>
         <br>
         <h4 class="title">Feel free to contact me about anything</h4>
+
+        <img id="bonfire-background" src="../resources/bonfire-background.png" alt="background">
+        <img id="bonfire-animation" src="../resources/bonfire-animation.gif" alt="animation">
+        <canvas id="ember-canvas"></canvas>
     </body>
 </html>
 
@@ -191,3 +242,4 @@
 </script>
 
 <script src="../script/nav.js"></script>
+<script src="../script/ember_system.js"></script>
