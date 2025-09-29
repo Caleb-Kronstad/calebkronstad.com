@@ -23,8 +23,9 @@
     html
     {
         overflow-x: hidden;
+        overflow-y: scroll;
         background-color: #120401;
-        scrollbar-gutter: stable both-edges;
+        scrollbar-gutter: stable;
     }
 
     body
@@ -95,8 +96,37 @@
 
     /* Mobile */
     @media screen and (max-width: 768px) {
+        body
+        {
+            margin: 2vh;
+            padding-top: 4vw;
+        }
+
+        .title
+        {
+            font-size: 8vw;
+        }
+
         .title h1 {
-            margin: 20vh 0;
+            margin-top: 15vh;
+            margin-bottom: 2vh;
+            font-size: 10vw;
+        }
+
+        .title p {
+            font-size: 5vw;
+        }
+
+        #bonfire-background
+        {
+            max-width: 80vw;
+            max-height: 50vh;
+        }
+
+        #bonfire-animation
+        {
+            max-width: 80vw;
+            max-height: 50vh;
         }
     }
     

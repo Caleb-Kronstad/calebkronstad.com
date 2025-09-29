@@ -12,8 +12,9 @@
     html
     {
         overflow-x: hidden;
+        overflow-y: scroll;
         background-color: #120401;
-        scrollbar-gutter: stable both-edges;
+        scrollbar-gutter: stable;
     }
 
     body
@@ -22,6 +23,128 @@
         margin: 5vh;
         font-family: Helvetica;
         padding-top: 2vw;
+    }
+
+    .title
+    {
+        display: flex;
+        justify-content: left;
+        margin-left: 32.5%;
+    }
+    h3
+    {
+        color: #bc4a34;
+    }
+    h4
+    {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 1vh;
+        color: #bc4a34;
+    }
+    .email, .phone
+    {
+        color: #a65b3f;
+    }
+    .email:visited
+    {
+        color: #a65b3f;
+    }
+
+    .external
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 1.25vw;
+        text-align: center;
+        margin-right: 22.5%;
+    }
+    .external > *
+    {
+        text-wrap: nowrap;
+        padding: 0.5vh 1vw;
+    }
+    .external-img
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+    }
+    .external-btn
+    {
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+        border-radius: 0.2vw;
+        background-color: #a65b3f;
+        border: 0.1vw solid #541801;
+        color: #a93c20;
+        margin: 0.25vw 0.25vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .external-btn:hover
+    {
+        background-color: rgb(141, 55, 21);
+        border: 0.1vw solid #541801;
+        transform: scale(1.1) perspective(1px);
+        color: #be481b;
+    }
+
+    @media screen and (max-width: 768px) {
+        body
+        {
+            margin: 0;
+            margin-top: 15vh;
+            padding: 2vh;
+            padding-top: 2vh;
+        }
+
+        .title
+        {
+            justify-content: center;
+            margin-left: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h3
+        {
+            font-size: 6vw;
+            text-align: center;
+        }
+
+        h4
+        {
+            font-size: 4vw;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .external
+        {
+            margin-right: 0;
+            font-size: 4vw;
+            gap: 2vw;
+        }
+
+        .external > *
+        {
+            padding: 1vh 2vw;
+        }
+
+        .external-btn
+        {
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            border-radius: 2vw;
+            margin: 1vw;
+        }
     }
 
 </style>
@@ -38,11 +161,33 @@
             </nav>
         </header>
         
-        <p>
-            Page under construction
-        </p>
-        
+        <h3 class="title">Contact</h3>
+        <h4 class="title">Email:&nbsp;&nbsp;<a class="email" href="mailto:caleb@calebkronstad.com">caleb@calebkronstad.com</a>&nbsp;&nbsp;or&nbsp;&nbsp;<a class="email" href="mailto:calebtkronstad@gmail.com">calebtkronstad@gmail.com</a></h4>
+        <h4 class="title">Phone:&nbsp;&nbsp;<a class="phone">(919) 824 0748</a></h4>
+        <div class="external">
+            <button class="external-btn" id="github-btn"><img class="external-img" src="../resources/github-logo.png"></button>
+            <button class="external-btn" id="itchio-btn"><img class="external-img" src="../resources/itchio-logo.png"></button>
+            <button class="external-btn" id="linkedin-btn"><img class="external-img" src="../resources/linkedin-logo.png"></button>
+            <button class="external-btn" id="instagram-btn"><img class="external-img" src="../resources/instagram-logo.png"></button>
+        </div>
+        <br>
+        <h4 class="title">Feel free to contact me about anything</h4>
     </body>
 </html>
+
+<script>
+    document.getElementById("github-btn").onclick = function() {
+        window.open("https://github.com/Caleb-Kronstad", "_blank");
+    };
+    document.getElementById("itchio-btn").onclick = function() {
+        window.open("https://ckronstad.itch.io", "_blank");
+    };
+    document.getElementById("linkedin-btn").onclick = function() {
+        window.open("https://www.linkedin.com/in/calebkronstad", "_blank");
+    };
+    document.getElementById("instagram-btn").onclick = function() {
+        window.open("https://www.instagram.com/caleb.kronstad", "_blank");
+    };
+</script>
 
 <script src="../script/nav.js"></script>
