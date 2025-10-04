@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +10,137 @@
 </head>
 
 <style>
-    html
-    {
+    html {
         overflow-x: hidden;
         overflow-y: scroll;
         background-color: #120401;
         scrollbar-gutter: stable;
     }
 
-    body
-    {
+    body {
         overflow-x: hidden;
         margin: 5vh;
         font-family: Helvetica;
         padding-top: 2vw;
     }
 
-    p
-    {
+    .page-title {
         color: #bc4a34;
+        text-align: center;
+        font-size: 2vw;
+        margin-bottom: 3vh;
         position: relative;
         z-index: 20;
-        text-align: center;
-        margin-top: 20vh;
-        font-size: 2vw;
     }
 
-    #bonfire-background
-    {
+    .hobbies-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2vw;
+        position: relative;
+        z-index: 20;
+    }
+
+    .hobby-section {
+        margin-bottom: 4vh;
+        padding: 1.5vh 1.5vw;
+    }
+
+    .hobby-title {
+        color: #bc4a34;
+        font-size: 1.4vw;
+        margin-bottom: 1.5vh;
+        border-bottom: 2px solid #541801;
+        padding-bottom: 0.8vh;
+    }
+
+    .hobby-description {
+        color: #a65b3f;
+        font-size: 0.9vw;
+        margin-bottom: 1.5vh;
+        line-height: 1.6;
+    }
+
+    .hobby-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .hobby-list-item {
+        display: flex;
+        align-items: center;
+        gap: 1.5vw;
+        margin-bottom: 1.5vh;
+        padding: 1vh 1vw;
+        background-color: rgba(84, 24, 1, 0.2);
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .hobby-list-item:hover {
+        background-color: rgba(84, 24, 1, 0.4);
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 2px solid #541801;
+        flex-shrink: 0;
+    }
+
+    .item-text {
+        color: #bc4a34;
+        font-size: 1vw;
+        font-family: Helvetica;
+    }
+
+    .item-subtext {
+        color: #804c39;
+        font-size: 0.9vw;
+        margin-top: 0.3vh;
+        font-family: monospace;
+    }
+
+    .travel-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2vw;
+        margin-top: 2vh;
+    }
+
+    .travel-item {
+        padding: 1.5vh 1vw;
+        background-color: rgba(84, 24, 1, 0.2);
+        border-radius: 5px;
+    }
+
+    .travel-location {
+        color: #bc4a34;
+        font-size: 1.3vw;
+        font-weight: bold;
+        margin-bottom: 0.5vh;
+    }
+
+    .travel-description {
+        color: #a65b3f;
+        font-size: 1vw;
+        line-height: 1.4;
+    }
+
+    .coffee-section {
+        text-align: center;
+        padding: 3vh 2vw;
+    }
+
+    .coffee-text {
+        color: #bc4a34;
+        font-size: 1.5vw;
+        font-style: italic;
+    }
+
+    #bonfire-background {
         position: fixed;
         bottom: 0;
         left: 50%;
@@ -46,8 +150,7 @@
         max-height: 60vh;
     }
 
-    #bonfire-animation
-    {
+    #bonfire-animation {
         position: fixed;
         bottom: 0;
         left: 50%;
@@ -68,48 +171,238 @@
 
     /* Mobile */
     @media screen and (max-width: 768px) {
-        body
-        {
+        body {
             margin: 0;
             margin-top: 15vh;
             padding: 2vh;
             padding-top: 2vh;
         }
 
-        p
-        {
-            font-size: 5vw;
+        .page-title {
+            font-size: 8vw;
+        }
+
+        .hobby-section {
+            padding: 2vh 4vw;
+        }
+
+        .hobby-title {
+            font-size: 6vw;
+        }
+
+        .hobby-description {
+            font-size: 3.5vw;
+        }
+
+        .hobby-list-item {
+            gap: 3vw;
+        }
+
+        .item-image {
+            width: 50px;
+            height: 50px;
+        }
+
+        .item-text {
+            font-size: 3.8vw;
+        }
+
+        .item-subtext {
+            font-size: 3vw;
+        }
+
+        .travel-list {
+            grid-template-columns: 1fr;
+            gap: 2vh;
+        }
+
+        .travel-location {
+            font-size: 4.5vw;
+        }
+
+        .travel-description {
+            font-size: 3.5vw;
+        }
+
+        .coffee-text {
+            font-size: 4vw;
         }
 
         #bonfire-background,
-        #bonfire-animation
-        {
+        #bonfire-animation {
             max-width: 80vw;
             max-height: 50vh;
         }
     }
-
 </style>
 
-<html>
-    <body>
+<body>
+    <header class="navigation">
+        <nav>
+            <button class="nav-btn" id="home-btn"><b>HOME</b></button>
+            <button class="nav-btn" id="projects-btn"><b>PROJECTS</b></button>
+            <button class="nav-btn" id="hobbies-btn"><b>HOBBIES</b></button>
+            <button class="nav-btn" id="contact-btn"><b>CONTACT</b></button>
+        </nav>
+    </header>
 
-        <header class="navigation">
-            <nav>
-                <button class="nav-btn" id="home-btn"><b>HOME</b></button>
-                <button class="nav-btn" id="projects-btn"><b>PROJECTS</b></button>
-                <button class="nav-btn" id="hobbies-btn"><b>HOBBIES</b></button>
-                <button class="nav-btn" id="contact-btn"><b>CONTACT</b></button>
-            </nav>
-        </header>
-        
-        <p>Page under construction</p>
-        
-        <img id="bonfire-background" src="../resources/bonfire-background.png" alt="background">
-        <img id="bonfire-animation" src="../resources/bonfire-animation.gif" alt="animation">
-        <canvas id="ember-canvas"></canvas>
-    </body>
-</html>
+    <h3 class="page-title">Hobbies</h3>
+
+    <div class="hobbies-container">
+
+        <!-- Music Section -->
+        <div class="hobby-section">
+            <h4 class="hobby-title">Music</h4>
+            <ul class="hobby-list">
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/dark-souls-3.jpg" alt="Album 1" class="item-image">
+                    <div>
+                        <div class="item-text">Dark Souls III</div>
+                        <div class="item-subtext">Yuka Kitamura</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/chemtrails.png" alt="Album 2" class="item-image">
+                    <div>
+                        <div class="item-text">Chemtrails over the Country Club</div>
+                        <div class="item-subtext">Lana Del Rey</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/cigarette-daydreams.jpg" alt="Album 3" class="item-image">
+                    <div>
+                        <div class="item-text">Cigarette Daydreams</div>
+                        <div class="item-subtext">Cage The Elephant</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/west-coast.jpg" alt="Album 4" class="item-image">
+                    <div>
+                        <div class="item-text">West Coast</div>
+                        <div class="item-subtext">Lana Del Rey</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/tonight-you-are-mine.jpg" alt="Album 5" class="item-image">
+                    <div>
+                        <div class="item-text">Tonight You Are Mine</div>
+                        <div class="item-subtext">The Technicolors</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Video Games Section -->
+        <div class="hobby-section">
+            <h4 class="hobby-title">Video Games</h4>
+            <ul class="hobby-list">
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/dark-souls-3.jpg" alt="Game 1" class="item-image">
+                    <div>
+                        <div class="item-text">Dark Souls III</div>
+                        <div class="item-subtext">Fromsoftware</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/rdr2.jpg" alt="Game 2" class="item-image">
+                    <div>
+                        <div class="item-text">Red Dead Redemption II</div>
+                        <div class="item-subtext">Rockstar Games</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/elden-ring.jpg" alt="Game 3" class="item-image">
+                    <div>
+                        <div class="item-text">Elden Ring</div>
+                        <div class="item-subtext">Fromsoftware</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/lunacid.jpg" alt="Game 4" class="item-image">
+                    <div>
+                        <div class="item-text">Lunacid</div>
+                        <div class="item-subtext">Kira</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/satisfactory.jpg" alt="Game 5" class="item-image">
+                    <div>
+                        <div class="item-text">Satisfactory</div>
+                        <div class="item-subtext">Coffee Stain Studios</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Reading Section -->
+        <div class="hobby-section">
+            <h4 class="hobby-title">Reading</h4>
+            <ul class="hobby-list">
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/wild-swans.jpg" alt="Book 1" class="item-image">
+                    <div>
+                        <div class="item-text">Wild Swans</div>
+                        <div class="item-subtext">Jung Chang</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/lotr.jpg" alt="Book 2" class="item-image">
+                    <div>
+                        <div class="item-text">Lord of the Rings</div>
+                        <div class="item-subtext">J.R.R. Tolkien</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/maze-runner.jpg" alt="Book 3" class="item-image">
+                    <div>
+                        <div class="item-text">Maze Runner</div>
+                        <div class="item-subtext">James Dashner</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Reading Section -->
+        <div class="hobby-section">
+            <h4 class="hobby-title">Traveling</h4>
+            <ul class="hobby-list">
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/xian.jpg" alt="Book 1" class="item-image">
+                    <div>
+                        <div class="item-text">Asia Trip</div>
+                        <div class="item-subtext">Traveled to China (Beijing, Tianjin, Qingdao, Xi'An, Jinan, Shanghai), Singapore, Thailand, Japan</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/yellowstone.jpg" alt="Book 2" class="item-image">
+                    <div>
+                        <div class="item-text">Cross-Country Road Trip</div>
+                        <div class="item-subtext">Traveled across the United States of America from North Carolina to Washington and back, going through ~20 states along the way</div>
+                    </div>
+                </li>
+                <li class="hobby-list-item">
+                    <img src="../resources/hobbies/montreal.jpg" alt="Book 3" class="item-image">
+                    <div>
+                        <div class="item-text">Canada Road Trip</div>
+                        <div class="item-subtext">Traveled to Quebec and visited major locations like Montreal and Quebec City</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coffee Section -->
+        <div class="hobby-section coffee-section">
+            <h4 class="hobby-title">Coffee</h4>
+            <p class="coffee-text">The fuel that powers my late-night coding sessions</p>
+        </div>
+    </div>
+
+    <img id="bonfire-background" src="../resources/bonfire-background.png" alt="background">
+    <img id="bonfire-animation" src="../resources/bonfire-animation.gif" alt="animation">
+    <canvas id="ember-canvas"></canvas>
+</body>
 
 <script src="../script/nav.js"></script>
 <script src="../script/ember_system.js"></script>
+</html>
